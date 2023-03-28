@@ -10,8 +10,16 @@ header.style.borderBottom='solid 5px #000';
 //     items[i].style.fontWeight='bold';
 // }
 //get element by tag
-var li=document.getElementsByTagName('li');
-for(var i=0;i<li.length;i++){
-  li[i].style.backgroundColor='grey';
-  li[i].style.fontWeight='bold';
+// var li=document.getElementsByTagName('li');
+// for(var i=0;i<li.length;i++){
+//   li[i].style.fontWeight='bold';
+// }
+// Queryelector
+var second=document.querySelector('li:nth-child(2)');
+second.style.backgroundColor='green';
+//QuerySelectorAll
+var odd=document.querySelectorAll('li:nth-child(odd)');
+
+for(var i=0;i<odd.length;i++){
+  odd[i].style.backgroundColor='grey';
 }
