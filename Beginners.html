@@ -28,6 +28,11 @@
     const email=event.target.emailId.value;
     localStorage.setItem('name', name);
     localStorage.setItem('email', email);
+     const obj={
+      name,
+      email
+     }
+     localStorage.setItem('userDetails',JSON.stringify(obj));
   }
 </script>
 </body>
