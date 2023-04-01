@@ -17,5 +17,14 @@ function showUser(obj){
   const parent=document.getElementById('ListofItems');
   const children=document.createElement('li');
   children.textContent=obj.name +'-'+ obj.email
+
+  const DeleteButton=document.createElement('input')
+  DeleteButton.type='button'
+  DeleteButton.value='Delete'
+  DeleteButton.onclick= () =>{
+    localStorage.removeItem(obj.email)
+    parent.removeChild(children)
+  }
+  children.appendChild(DeleteButton)
   parent.appendChild(children)
 }
