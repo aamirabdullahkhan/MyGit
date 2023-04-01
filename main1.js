@@ -25,6 +25,17 @@ function showUser(obj){
     localStorage.removeItem(obj.email)
     parent.removeChild(children)
   }
+  const EditButton=document.createElement('input')
+  EditButton.type='button'
+  EditButton.value='Edit'
+  EditButton.onclick = () =>{
+    localStorage.removeItem(obj.email)
+    parent.removeChild(children)
+    document.getElementById('name').value=obj.name
+    document.getElementById('email').value=obj.email
+  }
+
   children.appendChild(DeleteButton)
+  children.appendChild(EditButton)
   parent.appendChild(children)
 }
