@@ -9,31 +9,21 @@
 </head>
 
 <body>
-  <header>BEGINN</header>
-  <form onsubmit="saveToLocalStorage(event)">
+  <header class="header">BEGINN</header>
+  <section class="container">
+  <form id="my-form" onsubmit="saveToLocalStorage(event)">
     <div>
-      <label>NAME:</label><br>
-      <input type="text" name="userName" required>
+      <label for="name">NAME:</label><br>
+      <input type="text" id="name" name="userName" required>
     </div>
     <div>
-      <label>EMAIL:</label><br>
-      <input type="email" name="emailId" required>
+      <label for="email">EMAIL:</label><br>
+      <input type="email" id="email" name="emailId" required>
     </div>
-    <button>SUBMIT</button>
+    <button class="btn">SUBMIT</button>
   </form>
-<script>
-  function saveToLocalStorage(event){
-    event.preventDefault();
-    const name=event.target.userName.value;
-    const email=event.target.emailId.value;
-    localStorage.setItem('name', name);
-    localStorage.setItem('email', email);
-     const obj={
-      name,
-      email
-     }
-     localStorage.setItem('userDetails',JSON.stringify(obj));
-  }
-</script>
+  <ul id="ListofItems"></ul>
+  </section>
+<script src="main1.js"></script>
 </body>
 </html>
