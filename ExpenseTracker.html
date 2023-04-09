@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+</head>
+<body>
+  <header style="text-align:center"><h1>Expense Tracker</h1></header>
+  <form id="Expense" onsubmit="saveToLocalStorage(event)">
+    <div>
+  <label for="ex">Choose Expense:</label>
+  <input type="number" id="ex" name="ex">
+  </div>
+  <div>
+  <label for="des">Choose Description:</label>
+  <input type="text" id="des" name="des">
+  </div>
+  
+  <label id="category">Choose a Category:</label>
+  <select id="category" name="category">
+  <option value="books">Books</option>
+  <option value="movies">Movies</option>
+  <option value="music">Music</option>
+  <option value="games">Games</option>
+  </select><br>
+  <input type="button" value="Add Expense">
+  </form>
+  <ul id="listofExp"></ul>
+  <script src="expense.js"></script>
+</body>
+</html>
