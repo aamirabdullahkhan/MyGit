@@ -21,6 +21,28 @@ function saveToLocalStorage(event){
    //localStorage.setItem( obj.email ,JSON.stringify(obj));
    //showUser(obj)
 }
+window.addEventListener("DOMContentLoaded", ()=>{
+  axios.get("https://crudcrud.com/api/99070382efd947bfa4becfaacf5b4255/data")
+  .then((response)=>{
+    console.log(response)
+    for(var i=0;i<response.data.length;i++){
+      showUser(response.data[i])
+    }
+  })
+  .catch((error)=>{
+    console.log(error)
+  })
+
+  // const localStorageObj=localStorage
+  // const localStoragekeys=Object.keys(localStorageObj)
+
+  // for(var i=0;i<localStoragekeys.length;i++){
+  //   const key=localStoragekeys[i]
+  //   const userDetailsString=localStorageObj[key]
+  //   const userDetailsObj=JSON.parse(userDetailsString)
+  //   showUser(userDetailsObj)
+  // }
+})
 function showUser(obj){
   const parent=document.getElementById('ListofItems');
   const children=document.createElement('li');
